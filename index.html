@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Perpustakaan Cepat | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 Aplikasi Perpustakaan Cepat</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="navBeranda">Beranda</a></li>
+                <li><a href="#daftar-buku" id="navDaftarBuku">Daftar Buku</a></li>
+                <li><a href="#tambah-buku" id="navTambahBuku">Tambah Buku</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="content-section">
+            <h2>Selamat Datang di Dashboard Perpustakaan</h2>
+            <p>Di sini Anda dapat melihat ringkasan koleksi buku dan status pembacaan Anda.</p>
+            <div id="ringkasan-statistik">
+                </div>
+        </section>
+
+        <section id="daftar-buku" class="content-section" style="display: none;">
+            <h2>Daftar Koleksi Buku</h2>
+            <div id="area-pencarian">
+                <input type="text" id="input-cari" placeholder="Cari Judul, Penulis, atau ISBN...">
+                <button id="tombolCari">Cari</button>
+            </div>
+
+            <div id="koleksi-buku-tabel" style="overflow-x: auto;">
+                <table id="tabelDaftarBuku">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Judul</th>
+                            <th>Penulis</th>
+                            <th>ISBN</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTabelBuku">
+                        </tbody>
+                </table>
+                <p id="pesanKosongBuku" style="text-align: center; margin-top: 20px; color: #777;">
+                    Belum ada buku dalam koleksi Anda.
+                </p>
+            </div>
+        </section>
+        
+        <section id="tambah-buku" class="content-section" style="display: none;">
+            <h2>Tambah Buku Baru</h2>
+            <form id="formTambahBuku">
+                <div class="form-group">
+                    <label for="judulBuku">Judul Buku:</label>
+                    <input type="text" id="judulBuku" name="judulBuku" required>
+                </div>
+                <div class="form-group">
+                    <label for="penulisBuku">Penulis:</label>
+                    <input type="text" id="penulisBuku" name="penulisBuku" required>
+                </div>
+                <div class="form-group">
+                    <label for="isbnBuku">ISBN:</label>
+                    <input type="text" id="isbnBuku" name="isbnBuku" required>
+                </div>
+                
+                <p id="pesanError" style="color: red; display: none; margin-top: 10px; font-weight: bold;">
+                    Mohon isi semua field yang wajib diisi!
+                </p>
+
+                <button type="submit" id="submitBuku">Tambahkan Buku</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aplikasi Perpustakaan Cepat 🤖</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

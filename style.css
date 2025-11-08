@@ -1,0 +1,263 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; 
+    color: #333; 
+    line-height: 1.6;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50; 
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    padding-bottom: 10px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; 
+}
+
+header nav ul li a:hover {
+    background-color: #34495e; 
+    transform: translateY(-2px); 
+}
+
+/* Main Content Area */
+main {
+    flex-grow: 1; 
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+/* Styles for all Content Sections */
+.content-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+    border-left: 5px solid #3498db; 
+}
+
+.content-section h2 {
+    color: #2c3e50; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.9em; 
+}
+
+/* --- Form Styles --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"] {
+    width: 98%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.error-field {
+    border-color: #e74c3c !important; 
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+/* --- Tombol Modern & Flat --- */
+#submitBuku {
+    background-color: #28a745; 
+    color: white;
+    border: none; 
+    padding: 12px 25px; 
+    border-radius: 5px; 
+    font-family: inherit;
+    font-size: 1.1em; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; 
+    margin-top: 20px; 
+}
+
+#submitBuku:hover {
+    background-color: #218838; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#submitBuku:active {
+    transform: translateY(0); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: #1e7e34; 
+}
+
+/* --- Pencarian & Tombol Cari --- */
+#area-pencarian {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#area-pencarian input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#tombolCari {
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#tombolCari:hover {
+    background-color: #2980b9;
+}
+
+/* --- Table Styles --- */
+#koleksi-buku-tabel {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: #ffffff;
+}
+
+#tabelDaftarBuku {
+    width: 100%;
+    border-collapse: collapse; 
+    text-align: left;
+}
+
+#tabelDaftarBuku th,
+#tabelDaftarBuku td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee; 
+}
+
+#tabelDaftarBuku th {
+    background-color: #f2f2f2; 
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+#tabelDaftarBuku tbody tr:hover {
+    background-color: #f5f5f5; 
+}
+
+#tabelDaftarBuku tbody tr.book-complete {
+    background-color: #e9f7ef; 
+    color: #4CAF50; 
+}
+
+#tabelDaftarBuku td:last-child {
+    white-space: nowrap; 
+    text-align: center;
+}
+
+.toggle-status-btn {
+    background-color: #3498db; 
+    color: white;
+}
+
+.delete-book-btn {
+    background-color: #e74c3c; 
+    color: white;
+}
+
+.toggle-status-btn, .delete-book-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin: 2px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-status-btn:hover, .delete-book-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50; 
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: auto; 
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {font-size: 1.8em;}
+    header nav ul {flex-direction: column; align-items: center; margin-top: 15px;}
+    header nav ul li {margin: 5px 0; width: 80%;}
+    header nav ul li a {padding: 10px 0; text-align: center; background-color: #34495e;}
+    main {padding: 15px; margin: 15px auto; gap: 15px;}
+    .content-section {padding: 20px;}
+    #area-pencarian {flex-direction: column;}
+}
