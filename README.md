@@ -1,4 +1,4 @@
-## 📄 README.md (Naskah)
+## 📄 README.md
 
 ````markdown
 # 📚 Aplikasi Perpustakaan Cepat (Simple Library App)
